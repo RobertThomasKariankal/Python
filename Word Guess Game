@@ -1,0 +1,65 @@
+import random
+
+def jumble(word):
+    jumbled="".join(random.sample(word,len(word)))
+    return jumbled
+
+
+def choose():
+
+    sample_words=["apple","banana","orange"]
+    selected_word=random.choice(sample_words)
+    
+    return selected_word
+
+def thank(player1,player2,pp1,pp2,):
+   print(player1+" Scored ",pp1)
+   print(player2+" Scored ",pp2)
+   if pp1>pp2:
+      print(player1,"Won the game")
+   elif pp2>pp1:
+      print(player2,"Won the game")
+
+   else:
+        print("DRAW")
+
+   print("THANK YOU FOR PLAYING:)")     
+         
+
+def play():
+
+    player1=input("Enter the name of player 1:")
+    player2=input("Enter the name of player 2:")
+    pp1=0
+    pp2=0
+    turn=0
+    while(1):
+        word=choose()
+        jumbled_word=jumble(word)
+        if turn%2==0:
+         print("Turn for the player: ",player1)
+         print("The word is:",jumbled_word)
+         output_word=input("Enter the original word:")
+         if output_word==word:
+             print("Congratulations the word is correct!!")
+             pp1=pp1+1
+         else:
+             print("The answer is wrong,correct word is ",word)
+        else:
+         print("Turn for the player: ",player2)
+         print("The word is:",jumbled_word)
+         output_word=input("Enter the original word:")
+         if output_word==word:
+             print("Congratulations the word is correct!!")
+             pp2=pp2+1
+         else:
+             print("The answer is wrong,correct word is ",word)
+
+        turn=turn+1
+        continu =int(input("To continue press 1 or press 0:"))
+        if continu==0:
+            thank(player1,player2,pp1,pp2)
+            break
+
+if __name__=="__main__":
+   play()
