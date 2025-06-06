@@ -1,0 +1,22 @@
+class LinearCongruentialGenerator:
+
+    def __init__(self, seed, a=1664525, c=1013904223, m=2**32):
+        self.seed = seed
+        self.a = a
+        self.c = c
+        self.m = m
+        self.current = seed
+
+    def next(self):
+        self.current = (self.a * self.current + self.c) % self.m
+        return self.current
+
+    def generate_integers(self, count):
+        return [self.next() for _ in range(count)]
+
+if __name__ == "__main__":
+    seed = 12345  # You can choose any seed
+    lcg = LinearCongruentialGenerator(seed)
+    # Generate 3 pseudo-random integers
+    random_integers = lcg.generate_integers(3)
+    print("Random Integers:", random_integers)
