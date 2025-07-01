@@ -1,0 +1,10 @@
+import hashlib
+
+def hashingfunction(hash_string):
+hashobj=hashlib.md5()
+hashobj.update(hash_string.encode('utf-8'))
+return hashobj.hexdigest()
+
+hash_string=input("Enter a String:")
+hash_result= hashingfunction(hash_string)
+print(f"Hash Code Of {hash_string}={hash_result}")
