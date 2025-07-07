@@ -1,1 +1,10 @@
-
+order=int(input("Enter the number of elements:"))
+i=0
+arr = []
+while i<order:
+num = int(input("Enter a number to insert:"))
+arr.append(num)
+sorted_arr = sorted(arr)
+i=i+1
+print("The array:",arr)
+print("The Sorted Array:",sorted_arr)
