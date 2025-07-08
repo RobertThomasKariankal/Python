@@ -1,10 +1,14 @@
-first=int(input("Enter a number:"))
-second = int(input("Enter second number:"))
-sum =first+second
-print(f"Addition={sum}")
-substract = first-second
-print(f"Substraction={substract}")
-divide=first/second
-print(f"Division={divide}")
-multiplication=first*second
-print(f"Multiplication={multiplication}")
+first = int(input("Enter a number: "))
+second = int(input("Enter second number: "))
+
+sum = first + second
+print(f"Addition = {sum}")
+
+substract = first - second
+print(f"Subtraction = {substract}")
+
+divide = first / second
+print(f"Division = {divide}")
+
+multiplication = first * second
+print(f"Multiplication = {multiplication}")
