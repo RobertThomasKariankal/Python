@@ -1,13 +1,13 @@
 def prime_check(num):
-if num<=1:
-return False
-if num==2:
-return True
-for i in range(3,num,2):
-if num%i==0:
-print(num%i)
-return False
+    if num <= 1:
+        return False
+    if num == 2:
+        return True
+    for i in range(3, num, 2):
+        if num % i == 0:
+            print(num % i)
+            return False
+    return True
 
-return True
-num =int(input("Enter a Number:"))
-print(f"Number:{num}\nIs Prime:{prime_check(num)}")
+num = int(input("Enter a Number: "))
+print(f"Number: {num}\nIs Prime: {prime_check(num)}")
