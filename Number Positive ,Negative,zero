@@ -1,8 +1,8 @@
 
 num =int(input("Enter a number"))
 if num==0:
-print("Number is Zero")
+  print("Number is Zero")
 elif num>0:
-print("Number is Positive")
+  print("Number is Positive")
 elif num<0:
-print("Number is Negative")
+  print("Number is Negative")
